@@ -57,7 +57,7 @@ function mouseReleased() {
 
 
 function draw() {
-    background(0);
+    background(backgroundImg);
     Engine.update(engine);
     ground.show();
     for (let box of boxes) {
