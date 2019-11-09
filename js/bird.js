@@ -3,8 +3,7 @@ class Bird{
     {
         this.body = Bodies.circle(x, y, r);
         World.add(world, this.body);
-        this.x = x;
-        this.y = y;
+        Matter.Body.setMass(this.body, this.body.mass*4);
         this.r = r;
     };
 
@@ -15,8 +14,8 @@ class Bird{
         translate(pos.x, pos.y);
         rotate(angle);
         fill(255);
-        rectMode(CENTER);
-        circle(0, 0, this.r * 2);
+        imageMode(CENTER);
+        image(birdImg, 0, 0, this.r * 2, this.r * 2);
         pop();
     }
 }
