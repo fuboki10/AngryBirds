@@ -1,16 +1,22 @@
 class Bird{
-    constructor(x, y, w, h)
+    constructor(x, y, r)
     {
+        this.body = Bodies.circle(x, y, r);
+        World.add(world, this.body);
         this.x = x;
         this.y = y;
-        this.w = w;
-        this.h = h;
-        //this.sprite = loadImage(src);
+        this.r = r;
     };
 
     show() {
-        //image(this.sprite, this.x, this.y, this.w, this.h);
+        const pos = this.body.position;
+        const angle = this.body.angle;
+        push();
+        translate(pos.x, pos.y);
+        rotate(angle);
         fill(255);
-        circle(this.x, this.y, this.w);
+        rectMode(CENTER);
+        circle(0, 0, this.r * 2);
+        pop();
     }
 }
