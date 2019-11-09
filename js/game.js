@@ -12,9 +12,9 @@ let slingshot;
 
 
 function preload() {
-    backgroundImg = loadImage("../assets/Background.jpg");
-    boxImg = loadImage("../assets/box.png");
-    birdImg = loadImage("../assets/bird1.png");
+    backgroundImg = loadImage("assets/Background.jpg");
+    boxImg = loadImage("assets/box.png");
+    birdImg = loadImage("assets/bird1.png");
 }
 
 function setup() {
